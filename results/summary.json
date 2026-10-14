@@ -1,0 +1,70 @@
+{
+  "parameters": {
+    "n": 10,
+    "mass_squared": 13.0,
+    "spring": 5.0,
+    "beta": 1.0,
+    "eta": 1.0,
+    "probe_r": 1.0,
+    "probe_frequency": 1.0,
+    "insert_site": 0
+  },
+  "conventions": {
+    "ordering": "interleaved: obs,L0,...,L(N-1),R0,...,R(N-1)",
+    "entropy_units": "nats",
+    "vacuum_covariance": "I/2",
+    "H_coupling": "H_L+H_R+(eta/4) sum_(j!=insert) [w0*x_Lj*x_Rj+p_Lj*p_Rj/w0]",
+    "isolated_evolution": "modular beta H",
+    "local_terms_during_coupling": "physical H",
+    "probe": "TMS r; local diag(1/sqrt(probe_frequency),sqrt(probe_frequency))"
+  },
+  "scan": {
+    "coupling_max": 16.0,
+    "coupling_points": 321,
+    "evolution_max": 15.0,
+    "evolution_points": 301
+  },
+  "selected_evolution_time": 3.0,
+  "selected_coupling_time": 6.5,
+  "coupling_selection": "first TFD peak with prominence >= 2% of 2S(obs)",
+  "I_obs_LR_expected": 3.2396441857954055,
+  "max_total_MI_drift": 2.511324481702104e-11,
+  "resources": {
+    "tfd": {
+      "S_L": 0.6101007458579017,
+      "S_R": 0.6101007458579017,
+      "S_LR": 9.695265304609934e-14,
+      "I_L_R": 1.2202014917157065,
+      "energy_L": 24.176015287418195,
+      "energy_R": 24.176015287418195
+    },
+    "product": {
+      "S_L": 0.6101007458579017,
+      "S_R": 0.6101007458579017,
+      "S_LR": 1.2202014917157973,
+      "I_L_R": 6.217248937900877e-15,
+      "energy_L": 24.176015287418195,
+      "energy_R": 24.176015287418195
+    }
+  },
+  "selected_final": {
+    "tfd": {
+      "I_obs_L": 0.4008293694479743,
+      "I_obs_R": 2.826463079343336,
+      "I_obs_LR": 3.2396441857945595
+    },
+    "product": {
+      "I_obs_L": 0.3997852731398188,
+      "I_obs_R": 2.784745354251211,
+      "I_obs_LR": 3.23964418579458
+    }
+  },
+  "evolution_scan_largest_TFD_advantage": {
+    "evolution_time": 3.85,
+    "TFD_minus_product_I_obs_R": 0.05800591358212959
+  },
+  "evolution_scan_smallest_TFD_advantage": {
+    "evolution_time": 0.1,
+    "TFD_minus_product_I_obs_R": -0.0024185763855810727
+  }
+}
